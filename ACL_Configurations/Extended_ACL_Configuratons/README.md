@@ -29,6 +29,7 @@ ip access-group 100 in
 **Cisco Packet Tracer | Extended ACL | IPv4 | TCP/UDP Filtering | Port-Based Filtering | Router Configuration | Network Troubleshooting**
 
 ## Image
+<img width="261" height="369" alt="Screenshot 2026-10-03 112846" src="https://github.com/user-attachments/assets/0601172b-42d6-44c9-8525-89f0a95aeb39" />
 
 
 
