@@ -1,35 +1,35 @@
-# Extended ACL – Cisco Packet Tracer
+# Named ACL – Cisco Packet Tracer
 
 ## Overview
 
-Configured and tested an **Extended Access Control List (ACL)** in Cisco Packet Tracer to control traffic based on **source IP, destination IP, protocol, and port number**.
+Configured and tested **Named Access Control Lists (ACLs)** in Cisco Packet Tracer to manage network traffic using a descriptive ACL name instead of a numeric ACL ID.
 
 ## Key Tasks
 
-* Configured Extended ACL using `permit` and `deny`.
-* Restricted specific traffic between source and destination networks.
-* Applied protocol and port-based filtering.
-* Applied ACL to a router interface using `ip access-group`.
-* Verified ACL using `show access-lists` and `show running-config`.
-* Tested traffic filtering using `ping` and application-specific traffic.
+* Configured Named Standard/Extended ACL.
+* Used descriptive ACL names for easier identification and management.
+* Configured `permit` and `deny` rules.
+* Applied ACL to router interfaces using `ip access-group`.
+* Verified configuration using `show access-lists` and `show running-config`.
+* Tested traffic filtering using `ping` and network traffic.
 
 ## Example Configuration
 
 ```bash
-access-list 100 deny tcp host 192.168.1.10 host 192.168.2.10 eq 80
-access-list 100 permit ip any any
+ip access-list extended BLOCK_WEB
+ deny tcp host 192.168.1.10 any eq 80
+ permit ip any any
 
 interface g0/0
-ip access-group 100 in
+ ip access-group BLOCK_WEB in
 ```
 
 ## Skills Demonstrated
 
-**Cisco Packet Tracer | Extended ACL | IPv4 | TCP/UDP Filtering | Port-Based Filtering | Router Configuration | Network Troubleshooting**
+**Cisco Packet Tracer | Named ACL | Standard & Extended ACL | IPv4 | TCP/UDP Filtering | Port-Based Filtering | Network Troubleshooting**
 
-## image 
-<img width="269" height="379" alt="Screenshot 2026-10-03 113716" src="https://github.com/user-attachments/assets/eb928c01-74dd-4af3-9560-1f19c0e066a2" />
+## Image 
+<img width="269" height="379" alt="Screenshot 2026-10-03 113716" src="https://github.com/user-attachments/assets/e196ec02-2803-427b-be64-fb38aa4da055" />
 
 
-Successfully implemented and verified **granular traffic filtering** using Extended ACL.
-
+Successfully implemented and verified **named, manageable traffic-filtering rules** using Named ACLs.
