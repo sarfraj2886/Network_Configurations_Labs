@@ -19,7 +19,7 @@ access-list 10 deny host 192.168.1.10
 access-list 10 permit any
 
 interface g0/0/0
-ip access-group 10 in
+ip access-group 10 out
 ```
 
 ## Skills Demonstrated
